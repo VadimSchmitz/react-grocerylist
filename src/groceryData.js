@@ -17,18 +17,7 @@ const products = [
         price: 2,
         qty: 1,
     },
-    {
-        id: "4",
-        name: "Coffee",
-        price: 2,
-        qty: 6,
-    },
-    {
-        id: "5",
-        name: "Snacks",
-        price: 4,
-        qty: 1,
-    },
+    
 ]
 
 export default products
