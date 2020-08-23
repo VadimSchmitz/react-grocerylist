@@ -14,8 +14,7 @@ export default function Grocerylist({ initialItems }) {
     setItems(newItems);
   };
 
-  const total = items
-    .reduce((total, item) => total + item.qty * item.price, 0)
+  const total = items.reduce((total, item) => total + item.qty * item.price, 0)
     .toFixed(2);
 
   return (

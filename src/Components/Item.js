@@ -1,24 +1,16 @@
 import React from 'react'
 
-export default function Item({id, price, qty, name, updateQty}) {
+export default function item({id,qty,name,price,changeQty}) {
 
-    const addOne = () => {
-        updateQty(id,qty +1)
-    }
+  const addOne = () =>{changeQty(id,qty+1)}
+  const minOne = () =>{changeQty(id,qty-1)}
+  return (
+    <div>
+        <div>name: {name}</div>
+        <button onClick={minOne}>+</button><div>qty: {qty}</div><button onClick={addOne}>+</button>
+        <div>price: $ {price}</div>
 
-    const minOne = () => {
-        updateQty(id,qty -1)
-    }
-
-    return (
-
-        <div>
-            <h1>{name}</h1>
-            <p>price: ${price}</p>
-
-            <button onClick={minOne}>-</button>
-            quantity: {qty}
-            <button onClick={addOne}>+</button>
-        </div>
-    )
+        <br></br>
+    </div>
+  )
 }

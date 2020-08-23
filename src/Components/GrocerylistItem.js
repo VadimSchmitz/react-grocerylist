@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function GroecerylistItem({ id, name, price, qty, updateQty }) {
+export default function GrocerylistItem({ id, name, price, qty, updateQty }) {
   const addOne = () => {
     updateQty(id, qty + 1);
   };
