@@ -18,16 +18,22 @@ export default function Grocerylist({ initialItems }) {
     .toFixed(2);
 
   return (
-    <div>
-      <h1>i am grocerylist</h1>
-      <div>
-        {items.map((item) => (
-          <GrocerylistItem key={item.id} updateQty={updateQty} {...item} />
-        ))}
-      </div>
+    <div className="container">
+      <div className="cart">
+        <div className="header">
+          <h1 className="header-title">Het totaal bedrag is €{total}.</h1>
+          <h3 className="header-content">Bestellingen boven de € 40 worden gratis bezorgd. En ook retourneren is gratis.</h3>
+          <button className="pay-button">Afrekenen</button>
+        </div>
 
-      <div>
-        <h3>Grand total:$ {total}</h3>
+        <div className="cart-items">
+
+          
+            {items.map((item) => (
+              <GrocerylistItem key={item.id} updateQty={updateQty} {...item} />
+            ))}
+        
+        </div>
       </div>
     </div>
   );
